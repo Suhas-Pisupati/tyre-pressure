@@ -3,7 +3,7 @@
 // Service Worker Registration
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
+      navigator.serviceWorker.register('service-worker.js')
         .then((registration) => {
           console.log('Service Worker registered with scope:', registration.scope);
         })
@@ -64,5 +64,20 @@ if ('serviceWorker' in navigator) {
             }
         });
 }
+function calculatePressure () {
+  // Get the value of the load input
+  var load = document.getElementById('load').value;
 
+  // Check if the load is valid
+  if (load === '' || isNaN(load) || load <= 0) {
+      document.getElementById('calcResult').innerHTML = "Please enter a valid load in kilograms.";
+      return;
+  }
+
+  // Calculate tire pressure (this is a placeholder formula)
+  var pressure = load * 0.02; // Example: 2% of the load
+
+  // Display the calculated pressure
+  document.getElementById('calcResult').innerHTML = "Recommended Tyre Pressure: " + pressure.toFixed(2) + " PSI";
+}
   
