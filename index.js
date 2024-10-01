@@ -64,8 +64,17 @@ function handleLogin(event) {
     document.getElementById('main').classList.toggle('hidden');
     document.getElementById('login').classList.toggle('hidden');
 
+    
   } else {
     document.getElementById('loginResult').textContent = "Invalid email or password.";
   }
+}
+function handleLogout(){
+  document.getElementById('loginResult').textContent = null;
+  document.getElementById('header').classList.toggle('hidden');
+  document.getElementById('main').classList.toggle('hidden');
+  document.getElementById('login').classList.toggle('hidden');
+  document.getElementById('email').value = null;
+  document.getElementById('password').value = null;
 }
 

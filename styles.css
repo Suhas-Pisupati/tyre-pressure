@@ -41,11 +41,10 @@ main header h1 {
   font-size: 2em;
 }
 
-nav {
+main header nav {
   background-color: #333;
   overflow: hidden;
 }
-
 nav ul {
   list-style-type: none;
   border-radius: 10px;
@@ -53,7 +52,9 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  background-color: transparent;
 }
+
 
 nav ul li {
   font-size: 100%;
@@ -70,7 +71,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #555;
+  background-color: #333;
   border-radius: 10px;
 }
 
