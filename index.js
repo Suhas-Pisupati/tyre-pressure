@@ -48,3 +48,10 @@ function calculatePressure() {
   document.getElementById("calcResult").innerHTML =
     "Recommended Tyre Pressure: " + pressure.toFixed(2) + " PSI";
 }
+window.addEventListener('resize', function() {
+  if (window.innerHeight < 600) { // Adjust the height as needed for your case
+      document.querySelector('.mobilenav').style.display = 'none'; // Hide the icons when keyboard is open
+  } else {
+      document.querySelector('.mobilenav').style.display = 'flex'; // Show the icons when keyboard is hidden
+  }
+});
