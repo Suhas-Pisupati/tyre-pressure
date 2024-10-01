@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
     <title>Find Optimum Tyre Pressure for Vehicles</title>
     <link rel="stylesheet" href="styles.css" />
     <link
@@ -11,7 +14,7 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header hidden" id="header">
       <h1>Optimum Tyre Pressure</h1>
       <nav class="nav">
         <ul>
@@ -22,8 +25,7 @@
         </ul>
       </nav>
     </header>
-
-    <main>
+    <main class="main hidden" id="main">
       <section class="container" id="home">
         <h2 id="Welcome">🛞Welcome🛞</h2>
         <p>
@@ -104,26 +106,54 @@
           <li>Replace tyres when tread depth is below 2/32 of an inch.</li>
         </ul>
       </section>
+
+      <ul class="mobilenav">
+        <a class="icon" href="#home">
+          <img class="icon-image" src="icons/settings.png" />
+        </a>
+        <a class="icon" href="#search">
+          <img class="icon-image" src="icons/search.png" />
+        </a>
+        <a class="icon" href="#calculator">
+          <img class="icon-image" src="icons/calculator-variant.png" />
+        </a>
+        <a class="icon" href="#tips">
+          <img class="icon-image" src="icons/business-tips.png" />
+        </a>
+      </ul>
+
+      <footer>
+        <p>Design and Developed by SUHAS</p>
+      </footer>
     </main>
-
-  <ul class="mobilenav"  >
-      <a class="icon" href="#home">
-        <img class="icon-image" src="icons/settings.png" />
-      </a>
-      <a class="icon" href="#search">
-        <img class="icon-image" src="icons/search.png" />
-      </a>
-      <a class="icon" href="#calculator">
-        <img class="icon-image" src="icons/calculator-variant.png" />
-      </a>
-      <a class="icon" href="#tips">
-        <img class="icon-image" src="icons/business-tips.png" />
-      </a>
-    </ul>
-
-    <footer>
-      <p>Design and Developed by SUHAS</p>
-    </footer>
+    <main class="login" id="login">
+      <div class="login-page">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="handleLogin(event)">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email (tyre@gmail.com)"
+            required
+          />
+          <br /><br />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Password (tyre)"
+            required
+          />
+          <br /><br />
+          <div class="btn">
+            <button type="submit">Login</button>
+          </div>
+          <br />
+        </form>
+        <div id="loginResult"></div>
+      </div>
+    </main>
 
     <script src="index.js"></script>
   </body>

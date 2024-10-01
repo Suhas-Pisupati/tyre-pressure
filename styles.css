@@ -27,7 +27,7 @@ h1 {
   margin: 0;
 }
 
-header {
+main header {
   position: fixed;
   width: 100%;
   background-color: #333;
@@ -36,7 +36,7 @@ header {
   text-align: center;
 }
 
-header h1 {
+main header h1 {
   margin: 0;
   font-size: 2em;
 }
@@ -137,7 +137,7 @@ section {
     padding: 10px;
 }
 
-.mobilenav {
+main .mobilenav {
   background-color: rgba(70, 70, 70, 1);
   width: 100%;
   position: fixed;
@@ -204,9 +204,34 @@ button:hover {
   padding-left: 20px;
   line-height: 1.6;
 }
+.login{
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-page{
+    width:max-content;
+    height: max-content;
+    padding: 10px;
+    border:2px solid black;
+    border-radius:10px;
+    
+  }
+}
+#loginForm input[type="email"],
+#loginForm input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 /* Footer styles */
-footer {
+main footer {
   background-color: #333;
   color: #fff;
   text-align: center;
@@ -214,7 +239,9 @@ footer {
   width: 100%;
   height: max-content;
 }
-
+.hidden{
+  display: none;
+}
 @media only screen and (max-width:600px){
     body{
         font-size: small;
@@ -222,9 +249,9 @@ footer {
     .nav{
         display: none;
     }
-    .mobilenav{
-        display: flex;
-        height: 100px;
+    main .mobilenav{
+      display: flex;
+      height: 100px;
     }
     #home{
         margin-top: 100px;
