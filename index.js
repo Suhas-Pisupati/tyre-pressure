@@ -45,7 +45,7 @@ function calculatePressure() {
     "Recommended Tyre Pressure: " + pressure.toFixed(2) + " PSI";
 }
 window.addEventListener("resize", function () {
-  if (window.innerHeight < 600) {
+  if (window.innerHeight > 600) {
     // Adjust the height as needed for your case
     document.querySelector(".mobilenav").style.display = "none"; // Hide the icons when keyboard is open
   } else {
@@ -54,11 +54,11 @@ window.addEventListener("resize", function () {
 });
 function handleLogin(event) {
   event.preventDefault(); // Prevent form submission from refreshing the page
-  const email = document.getElementById('email').value;
+  const email = document.getElementById('text').value;
   const password = document.getElementById('password').value;
 
   // Basic login validation (in practice, you'd validate this server-side)
-  if (email === "tyre@gmail.com" && password === "tyre") {
+  if (email === "admin" && password === "1234") {
     document.getElementById('loginResult').textContent = "Login successful!";
     document.getElementById('header').classList.toggle('hidden');
     document.getElementById('main').classList.toggle('hidden');

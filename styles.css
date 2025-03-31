@@ -206,13 +206,17 @@ button:hover {
   line-height: 1.6;
 }
 .login{
+  h2{
+    text-align: center;
+  }
   width:100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   .login-page{
-    width:max-content;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: max-content;
     height: max-content;
     padding: 10px;
     border:2px solid black;
@@ -232,13 +236,14 @@ button:hover {
 }
 
 /* Footer styles */
-main footer {
+footer {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 0px 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  height: max-content;
+  height: min-content;
 }
 .hidden{
   display: none;
